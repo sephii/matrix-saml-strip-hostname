@@ -1,10 +1,11 @@
 [tool.poetry]
 name = "matrix-saml-strip-hostname"
-version = "0.1.1"
+version = "0.1.2"
 description = "SAML mapping provider to strip hostnames from mxids"
 authors = ["Sylvain Fankhauser <sephi@fhtagn.top>"]
 repository = "https://github.com/sephii/matrix-saml-strip-hostname"
 readme = "README.rst"
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = ">=3.5"
