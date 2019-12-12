@@ -32,7 +32,7 @@ mapping provider::
 Configuration
 -------------
 
-This mapper inherits from `the default mappping provider
+This mapper inherits from `the default mapping provider
 <https://github.com/matrix-org/synapse/blob/fc316a4894912f49f5d0321e533aabca5624b0ba/docs/saml_mapping_providers.md#synapses-default-provider>`_.
 It will first strip the hostname, and then pass the result to the
 ``synapse.handlers.saml_handler.DefaultSamlMappingProvider`` mapping provider.
