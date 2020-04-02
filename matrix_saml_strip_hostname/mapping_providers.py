@@ -1,4 +1,5 @@
 from synapse.handlers.saml_handler import DefaultSamlMappingProvider, SamlConfig
+from synapse.module_api import ModuleApi
 
 
 def strip_domain(username: str) -> str:
@@ -7,8 +8,8 @@ def strip_domain(username: str) -> str:
 
 
 class StripHostnameSamlMappingProvider(DefaultSamlMappingProvider):
-    def __init__(self, parsed_config: SamlConfig):
-        super().__init__(parsed_config)
+    def __init__(self, parsed_config: SamlConfig, module_api: ModuleApi):
+        super().__init__(parsed_config, module_api)
 
         orig_mxid_mapper = self._mxid_mapper
         self._mxid_mapper = lambda username: orig_mxid_mapper(strip_domain(username))
